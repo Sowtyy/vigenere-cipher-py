@@ -1,5 +1,5 @@
-#Version: 1.1.0
-#Date: 23.11.2023
+#Version: 1.1.1
+#Date: 24.11.2023
 #Author: Sowtyy
 
 
@@ -57,7 +57,7 @@ def askInputInt(output : str = "", *, allowEmpty : bool = False):
 def translateText(key : str, text : str, mode : str, offset : int = 0):
   translated = ""
   keyIndex = 0
-  key = key.upper()
+  key = key.upper().replace(" ", "")
 
   for symbol in text:
     num = ALPHABET.find(symbol.upper())
